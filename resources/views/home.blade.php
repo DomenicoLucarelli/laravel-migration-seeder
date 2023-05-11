@@ -17,7 +17,9 @@
 
 <body>
 
-    
+    @foreach ($trains as $item)
+        {{$item->azienda}}
+    @endforeach
 
 </body>
 
