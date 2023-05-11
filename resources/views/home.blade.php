@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <h1 class="text-center py-5">La stazione dei treni</h1>
+    <h1 class="text-center py-5">Trains</h1>
         
     <div class="container">
 
