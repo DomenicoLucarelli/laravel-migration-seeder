@@ -10,7 +10,8 @@ class HomeController extends Controller
 {
     public function index(){
 
-        $trains = Train::all();
+        // prendo solo le righe in cui il valore di 'orario_di_partenza' è uguale alla data odierna
+        $trains = Train::select('azienda','stazione_di_partenza','stazione_di_arrivo','orario_di_partenza')->whereDate('orario_di_partenza', '=',\Carbon\Carbon::today() )->get();
 
         return view('home', compact('trains'));
     }

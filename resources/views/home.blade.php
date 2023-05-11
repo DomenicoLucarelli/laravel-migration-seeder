@@ -16,13 +16,37 @@
 </head>
 
 <body>
-    <ul>
+    <h1 class="text-center py-5">La stazione dei treni</h1>
         
+    <div class="container">
+
+        <table class="table">
+            <thead>
+                <tr>
+                
+                <th scope="col">Azienda</th>
+                <th scope="col">Stazione di partenza</th>
+                <th scope="col">Stazione di arrivo</th>
+                <th scope="col">Orario di partenza</th>
     
-    @foreach ($trains as $item)
-        <li>{{$item->azienda}}</li>
-    @endforeach
-    </ul>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($trains as $train)
+                    
+                    <tr>               
+                    <td>{{$train->azienda}}</td>
+                    <td>{{$train->stazione_di_partenza}}</td>
+                    <td>{{$train->stazione_di_arrivo}}</td>
+                    <td>{{$train->orario_di_partenza}}</td>                
+                    </tr>
+    
+                @endforeach
+                
+            </tbody>
+            </table>
+    </div>
+
 </body>
 
 </html>
