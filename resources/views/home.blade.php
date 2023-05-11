@@ -16,11 +16,13 @@
 </head>
 
 <body>
-
+    <ul>
+        
+    
     @foreach ($trains as $item)
-        {{$item->azienda}}
+        <li>{{$item->azienda}}</li>
     @endforeach
-
+    </ul>
 </body>
 
 </html>
