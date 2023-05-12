@@ -21,7 +21,7 @@ class TrainsSeeder extends Seeder
             // creo un oggetto di Train
             $newTrain = new Train();
             // uso faker per dare dei valori ad ogni campo dell'oggetto
-            $newTrain->azienda = $faker->name();
+            $newTrain->azienda = $faker->word();
             $newTrain->stazione_di_partenza = $faker->city();
             $newTrain->stazione_di_arrivo = $faker->city();
             $newTrain->orario_di_partenza = $faker->dateTimeBetween('now','+2 week');
